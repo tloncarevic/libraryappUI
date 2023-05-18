@@ -1,7 +1,11 @@
 h1 {
-    color: #59a;
+    color: rgb(69, 119, 64);
 }
-.yellow-bg {
-    background-color: yellowgreen;
+div {
+    margin-bottom: 2em;
+}
+.background {
+    background-color: rgb(69, 119, 64);
     color: white;
+    padding: 1em;
 }

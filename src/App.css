@@ -1,3 +1,6 @@
+* {
+  font-family: 'Fira Sans';
+}
 .App {
   text-align: center;
 }
@@ -26,6 +29,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.navigation {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+ .container {
+  width: 50%;
+  float: left;
+ }
+
+ button {
+  padding: 0.3em;
+ }
+
+.button-view-close {
+width: 10em;
 }
 
 @keyframes App-logo-spin {

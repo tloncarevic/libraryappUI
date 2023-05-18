@@ -11,39 +11,40 @@ export default function Books() {
   const [books, setBooks] = useState([]);
   const [book, setBook] = useState({});
 
+  const handleBookEdit = async (id) => {
+    const response = await getBookById(id);
+    setBook(response);
+  };
+
   const onChangeBookTitle = (event) => {
-    setBook((val) => {
+    setBook((previousBookValue) => {
       return {
-        ...val,
+        ...previousBookValue,
         bookTitle: event.target.value,
       };
     });
   };
 
   const handleChangeBookAuthor = (event) => {
-    setBook((val) => {
+    setBook((previousBookValue) => {
       return {
-        ...val,
+        ...previousBookValue,
         bookAuthor: event.target.value,
       };
     });
   };
 
   const handleChangeQuantity = (event) => {
-    setBook((val) => {
+    setBook((previousBookValue) => {
       return {
-        ...val,
+        ...previousBookValue,
         quantity: Number(event.target.value),
       };
     });
   };
 
-  const handleBookEdit = async (id) => {
-    const response = await getBookById(id);
-    setBook(response);
-  };
   return (
-    <>
+    <div class="container">
       <h2>Create/Edit a Book</h2>
       <p>
         <input
@@ -93,17 +94,12 @@ export default function Books() {
       <button
         onClick={async () => {
           const response = await getBooks();
+          console.log(response);
           setBooks(response);
         }}
       >
         Refresh Books
       </button>
-    </>
+    </div>
   );
 }
-
-/*
-export default function Books() {
-    return (<h1>Hello Books</h1>)
-}
- */

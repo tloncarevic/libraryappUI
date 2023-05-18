@@ -44,7 +44,7 @@ export default function Users() {
     });
   };
   return (
-    <>
+    <div class="container">
       <h2>Create/Edit User</h2>
       <p>
         <input
@@ -80,7 +80,7 @@ export default function Users() {
       >
         Add User
       </button>
-
+      &nbsp;
       <button
         onClick={async () => {
           await updateUsers({ ...user });
@@ -100,6 +100,6 @@ export default function Users() {
       >
         Refresh Users
       </button>
-    </>
+    </div>
   );
 }

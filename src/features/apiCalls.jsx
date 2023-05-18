@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PORT, URL } from "../constants";
+import { URL, PORT } from "./constants";
 
 
 // USERS ----------------------------------------------------------------

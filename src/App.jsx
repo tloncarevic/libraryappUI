@@ -21,20 +21,21 @@ function App() {
   };
 
   return (
-    <div>
+    <div class="navigation">
+
       <Hello></Hello>
-      {/* Users Button */}
-      <button onClick={handleViewUsers}>
+
+      {/* View/Close Button */}
+      <button class="button-view-close" onClick={handleViewUsers}>
         {viewUsers ? `Close` : `View`} Users
       </button>
-      {/* Users Component */}
-      {viewUsers && <Users />}
       &nbsp;
-      {/* Books Button */}
-      <button onClick={handleViewBooks}>
+      <button class="button-view-close" onClick={handleViewBooks}>
         {viewBooks ? `Close` : `View`} Books
       </button>
-      {/* Books Component */}
+
+      {/* Create/Edit Component */}
+      {viewUsers && <Users />}
       {viewBooks && <Books />}
     </div>
   );
