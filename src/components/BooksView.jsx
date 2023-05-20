@@ -4,16 +4,16 @@ export default function BooksView ({books, onEdit }) {
     return (
     <div>
         {books.map(book=> (
-            <div key={book.id}>
+            <div key={book.book_id}>
                 <p>
-                    {book.id}: {book.bookAuthor} - "{book.bookTitle}" ({book.quantity})
+                    {book.book_id}: {book.bookAuthor} - "{book.bookTitle}" ({book.quantity})
                     &nbsp;
                     <button onClick={()=>{
-                        onEdit(book.id)
+                        onEdit(book.book_id)
                     }}>Edit</button>
                     &nbsp;
                     <button onClick={()=>{
-                        deleteBook(book.id);
+                        deleteBook(book.book_id);
                     }}>Delete</button>
                 </p>
             </div>

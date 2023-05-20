@@ -27,7 +27,7 @@ export const getUsers = async () => {
   export const updateUsers = async (user) => {
     try {
       const res = await axios.put(
-        URL+ ":"+ PORT + "/users/" + user.id,
+        URL+ ":"+ PORT + "/users/" + user.user_id,
         user
       );
       return res.data;
@@ -82,7 +82,7 @@ export const addBook = async (book) => {
 export const updateBook = async (book) => {
   try {
     const res = await axios.put(
-      URL+ ":"+ PORT + "/books/" + book.id,
+      URL+ ":"+ PORT + "/books/" + book.book_id,
       book
     );
     return res.data;
@@ -125,3 +125,5 @@ export const uploadBookThumbnail = async (formData) => {
     return {error: err.message};
   }
 };
+
+// BORROW ----------------------------------------------------------------

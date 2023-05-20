@@ -32,17 +32,18 @@
 }
 
 .navigation {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
  .container {
   width: 50%;
   float: left;
+  color:#181818;
  }
 
  button {
-  padding: 0.3em;
+  padding: 0.4em;
  }
 
 .button-view-close {
